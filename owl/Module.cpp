@@ -33,6 +33,9 @@
       << message                                \
       << OWL_TERMINAL_DEFAULT << std::endl
 
+#if OPTIX_VERSION >= 70700
+  #define optixModuleCreateFromPTX optixModuleCreate
+#endif
 
 namespace owl {
 
